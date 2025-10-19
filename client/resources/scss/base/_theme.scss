@@ -1,0 +1,21 @@
+.theme-toggle {
+  background: var(--bg-secondary);
+  border: 2px solid var(--border);
+  border-radius: 50px;
+  padding: 0.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+  border-color: var(--primary);
+  transform: scale(1.05);
+}
+
+.theme-icon {
+  width: 20px;
+  height: 20px;
+  color: var(--text-primary);
+}

@@ -1,0 +1,29 @@
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg-page);
+  min-height: 100vh;
+  color: var(--text-primary);
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+main {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  @media (max-width: 767px) {
+    padding: 1.5rem 1rem;
+  }
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
