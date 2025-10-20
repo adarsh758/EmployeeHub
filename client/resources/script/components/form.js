@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /* =============== Imports =============== */
 import { validateDate } from '../validation/date-validation.js';
 import validateField from '../validation/error-msg.js';
@@ -91,6 +92,7 @@ function handleFormSubmit(event) {
     data[key] = sanitizeInput(value);
   }
 
+  
   console.log('Sanitized Form Data:', data);
   alert('Employee registered successfully! Check console for details.');
 
