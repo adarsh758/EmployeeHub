@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A modern and responsive Employee Registration Form with a clean, dashboard-inspired interface."
+    />
+    <title>Employee Information Form</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./resources/css/main.css" />
+    <link rel="stylesheet" href="./resources/css/pages/home.css" />
+  </head>
+  <body data-theme="light">
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Header -->
+    <header class="header">
+      <div class="header__container">
+        <a href="#" class="logo">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M20 7H4C2.89543 7 2 7.89543 2 9V19C2 20.1046 2.89543 21 4 21H20C21.1046 21 22 20.1046 22 19V9C22 7.89543 21.1046 7 20 7Z"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M16 21V5C16 4.46957 15.7893 3.96086 15.4142 3.58579C15.0391 3.21071 14.5304 3 14 3H10C9.46957 3 8.96086 3.21071 8.58579 3.58579C8.21071 3.96086 8 4.46957 8 5V21"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          EmployeeHub
+        </a>
+        <nav class="header__nav">
+          <ul class="header__nav-links">
+            <li><a href="#">Dashboard</a></li>
+          </ul>
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+            <svg
+              class="theme-icon"
+              id="themeIcon"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 3V4M12 20V21M4 12H3M6.31412 6.31412L5.5 5.5M17.6859 6.31412L18.5 5.5M6.31412 17.69L5.5 18.5M17.6859 17.69L18.5 18.5M21 12H20M16 12C16 14.2091 14.2091 16 12 16C9.79086 16 8 14.2091 8 12C8 9.79086 9.79086 8 12 8C14.2091 8 16 9.79086 16 12Z"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+          <div class="header__hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Mobile Navigation Menu -->
+    <div class="mobile-nav" id="mobileNav">
+      <ul>
+        <li><a href="#">Dashboard</a></li>
+      </ul>
+
+      <div class="mobile-nav__theme-section">
+        <button class="theme-toggle" id="mobileThemeToggle" aria-label="Toggle theme">
+          <svg
+            class="theme-icon"
+            id="mobileThemeIcon"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12 3V4M12 20V21M4 12H3M6.31412 6.31412L5.5 5.5M17.6859 6.31412L18.5 5.5M6.31412 17.69L5.5 18.5M17.6859 17.69L18.5 18.5M21 12H20M16 12C16 14.2091 14.2091 16 12 16C9.79086 16 8 14.2091 8 12C8 9.79086 9.79086 8 12 8C14.2091 8 16 9.79086 16 12Z"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <main>
+      <div class="container">
+        <!-- Form -->
+        <section class="form">
+          <div class="form__card">
+            <h1 class="form__title">Employee Registration</h1>
+            <p class="form__subtitle">Enter employee information below</p>
+
+            <form id="employeeForm" novalidate>
+              <div class="form__grid">
+                <div class="form__group">
+                  <label for="employeeId">Employee ID <span class="form__required">*</span></label>
+                  <input type="text" id="employeeId" name="employeeId" required />
+                  <div class="form__error-message" id="employeeIdError"></div>
+                </div>
+
+                <div class="form__group">
+                  <label for="name">Name <span class="form__required">*</span></label>
+                  <input type="text" id="name" name="name" required />
+                  <div class="form__error-message" id="nameError"></div>
+                </div>
+
+                <div class="form__group">
+                  <label for="dob">Date of Birth <span class="form__required">*</span></label>
+                  <input type="date" id="dob" name="dob" required />
+                  <div class="form__error-message" id="dobError"></div>
+                </div>
+
+                <div class="form__group">
+                  <label>Gender <span class="form__required">*</span></label>
+                  <div class="form__radio-group">
+                    <label class="form__radio-option">
+                      <input type="radio" name="gender" value="Male" required />
+                      <span>Male</span>
+                    </label>
+                    <label class="form__radio-option">
+                      <input type="radio" name="gender" value="Female" required />
+                      <span>Female</span>
+                    </label>
+                    <label class="form__radio-option">
+                      <input type="radio" name="gender" value="Other" required />
+                      <span>Other</span>
+                    </label>
+                  </div>
+                  <div class="form__error-message" id="genderError"></div>
+                </div>
+
+                <div class="form__group form__group--full-width">
+                  <label for="address">Address <span class="form__required">*</span></label>
+                  <textarea id="address" name="address" required></textarea>
+                  <div class="form__error-message" id="addressError"></div>
+                </div>
+
+                <div class="form__group">
+                  <label for="phone">Phone Number <span class="form__required">*</span></label>
+                  <input type="tel" id="phone" name="phone" required />
+                  <div class="form__error-message" id="phoneError"></div>
+                </div>
+
+                <div class="form__group">
+                  <label for="doj">Date of Joining <span class="form__required">*</span></label>
+                  <input type="date" id="doj" name="doj" required />
+                  <div class="form__error-message" id="dojError"></div>
+                </div>
+
+                <div class="form__group">
+                  <label for="department">Department <span class="form__required">*</span></label>
+                  <select id="department" name="department" required>
+                    <option value="">Select Department</option>
+                    <option value="Engineering">Engineering</option>
+                    <option value="Human Resources">Human Resources</option>
+                    <option value="Finance">Finance</option>
+                    <option value="Marketing">Marketing</option>
+                    <option value="Sales">Sales</option>
+                    <option value="Operations">Operations</option>
+                  </select>
+                  <div class="form__error-message" id="departmentError"></div>
+                </div>
+
+                <div class="form__group">
+                  <label for="manager">Manager Name <span class="form__required">*</span></label>
+                  <input type="text" id="manager" name="manager" required />
+                  <div class="form__error-message" id="managerError"></div>
+                </div>
+
+                <div class="form__group">
+                  <label for="email">Email <span class="form__required">*</span></label>
+                  <input type="email" id="email" name="email" required />
+                  <div class="form__error-message" id="emailError"></div>
+                </div>
+
+                <div class="form__group">
+                  <label for="username">Username <span class="form__required">*</span></label>
+                  <input type="text" id="username" name="username" required />
+                  <div class="form__error-message" id="usernameError"></div>
+                </div>
+
+                <div class="form__group">
+                  <label for="password">Password <span class="form__required">*</span></label>
+                  <input type="password" id="password" name="password" required />
+                  <div class="form__error-message" id="passwordError"></div>
+                </div>
+
+                <div class="form__group form__group--full-width">
+                  <label>Profile Image</label>
+                  <div class="form__file-upload-container">
+                    <input type="file" id="profileImage" name="profileImage" accept="image/*" />
+                    <label for="profileImage" class="form__file-label">
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M21 15V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V15M17 8L12 3M12 3L7 8M12 3V15"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                      Choose Image
+                    </label>
+                    <img id="imagePreview" class="form__image-preview" alt="Preview" />
+                  </div>
+                </div>
+
+                <button type="submit" class="form__submit-btn">Register Employee</button>
+              </div>
+            </form>
+          </div>
+        </section>
+
+        <!-- Right Pannel -->
+        <section class="right-panel">
+          <!-- Employee Card -->
+          <div class="employee-card">
+            <div class="employee-card__image" id="cardImage">
+              <span>👤</span>
+            </div>
+            <div class="employee-card__name" id="cardName">Employee Name</div>
+            <div class="employee-card__dept" id="cardDept">Department</div>
+            <div class="employee-card__id">ID: <span id="cardId">Not Set</span></div>
+          </div>
+
+          <div class="instructions-card">
+            <div class="instructions-card__title">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" />
+                <path
+                  d="M12 16V12M12 8H12.01"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+              </svg>
+              Form Guidelines
+            </div>
+
+            <div class="instructions-card__item">
+              <div class="instructions-card__label">Employee ID</div>
+              <div class="instructions-card__text">
+                Alphanumeric, 4-10 characters (e.g., EMP001, E12345)
+              </div>
+            </div>
+
+            <div class="instructions-card__item">
+              <div class="instructions-card__label">Name</div>
+              <div class="instructions-card__text">Letters and spaces only, 2-50 characters</div>
+            </div>
+
+            <div class="instructions-card__item">
+              <div class="instructions-card__label">Phone Number</div>
+              <div class="instructions-card__text">
+                10 digits, format: 1234567890 or (123) 456-7890
+              </div>
+            </div>
+
+            <div class="instructions-card__item">
+              <div class="instructions-card__label">Email</div>
+              <div class="instructions-card__text">Valid email format (e.g., user@company.com)</div>
+            </div>
+
+            <div class="instructions-card__item">
+              <div class="instructions-card__label">Username</div>
+              <div class="instructions-card__text">
+                Alphanumeric and underscore, 4-20 characters
+              </div>
+            </div>
+
+            <div class="instructions-card__item">
+              <div class="instructions-card__label">Password</div>
+              <div class="instructions-card__text">
+                Min 8 characters, must include: uppercase, lowercase, number, and special character
+                (!@#$%^&*)
+              </div>
+            </div>
+
+            <div class="instructions-card__item">
+              <div class="instructions-card__label">Address</div>
+              <div class="instructions-card__text">Minimum 10 characters required</div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 EmployeeHub. All rights reserved.</p>
+    </footer>
+
+    <script type="module" src="./resources/script/script.js"></script>
+  </body>
+</html>
