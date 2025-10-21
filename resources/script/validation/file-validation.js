@@ -21,18 +21,50 @@ function showImagePreview(previewElement, imageSrc) {
 }
 
 /**
- * Inserts a profile image into a card container dynamically.
- *
- * @param {HTMLElement} container - The container element to insert the image into.
- * @param {string} imageSrc - The image source to be embedded.
+ * Creates a new profile <img> element.
+ * @param {string} src - The image source URL.
+ * @returns {HTMLImageElement} The created image element.
  */
-function updateCardImage(containerElement, imageSrc) {
-  const container = containerElement;
+function createProfileImage(src) {
   const img = document.createElement('img');
-  img.src = imageSrc;
+  img.src = src;
   img.alt = 'Profile';
-  container.appendChild(img);
+  return img;
 }
+
+/**
+ * Hides the placeholder element.
+ * @param {HTMLElement} container - The card container element.
+ */
+function hidePlaceholder(container) {
+  const placeholder = container.querySelector('span');
+  if (placeholder) placeholder.style.display = 'none';
+}
+
+/**
+ * Replaces an existing image or appends a new one.
+ * @param {HTMLElement} container - The card container element.
+ * @param {HTMLImageElement} newImage - The new image to insert.
+ */
+function replaceProfileImage(container, newImage) {
+  const oldImage = container.querySelector('img');
+  if (oldImage) oldImage.remove();
+  container.appendChild(newImage);
+}
+
+/**
+ * Updates the profile image in the employee card.
+ * Responsible only for orchestrating the update process.
+ *
+ * @param {HTMLElement} container - The container where the image should be displayed.
+ * @param {string} imageSrc - The new image source.
+ */
+function updateCardImage(container, imageSrc) {
+  hidePlaceholder(container);
+  const newImage = createProfileImage(imageSrc);
+  replaceProfileImage(container, newImage);
+}
+
 
 /**
  * Validates whether the uploaded file is within the allowed size limit.
