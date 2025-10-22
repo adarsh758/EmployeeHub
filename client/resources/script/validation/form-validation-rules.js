@@ -31,8 +31,13 @@ const validationRules = {
   },
   manager: {
     pattern: /^[A-Za-z\s]{2,50}$/,
-    message: 'Manager name must contain only letters and spaces',
+    message: 'Manager name must contain only letters and spaces (2-50 characters)',
   },
+  designation: {
+    pattern: /^[A-Za-z\s]{2,50}$/,
+    message: 'Designation must contain only letters and spaces (2-50 characters)',
+  },
+
 };
 
 export default validationRules;
