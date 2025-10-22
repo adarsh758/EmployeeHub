@@ -9,7 +9,6 @@ import updateErrorMessage from '../validation/toggle-error-msg.js';
 const form = document.getElementById('employeeForm');
 const imagePreviewElement = document.getElementById('imagePreview');
 const cardImageElement = document.getElementById('cardImage');
-const cardIdElement = document.getElementById('cardId');
 const cardNameElement = document.getElementById('cardName');
 const cardDeptElement = document.getElementById('cardDept');
 const textInputsElements = form.querySelectorAll(
@@ -57,7 +56,6 @@ function resetFormUI() {
   cardImageElement.innerHTML = '<span>👤</span>';
   cardNameElement.textContent = 'Employee Name';
   cardDeptElement.textContent = 'Department';
-  cardIdElement.textContent = 'ID: Not Set';
 
   textInputsElements.forEach((input) => {
     input.classList.remove('valid', 'invalid');

@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -22,7 +22,11 @@
     <header class="header">
       <div class="header__container">
         <a href="#" class="logo">
-          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
             <path
               d="M20 7H4C2.89543 7 2 7.89543 2 9V19C2 20.1046 2.89543 21 4 21H20C21.1046 21 22 20.1046 22 19V9C22 7.89543 21.1046 7 20 7Z"
               stroke="currentColor"
@@ -44,7 +48,11 @@
           <ul class="header__nav-links">
             <li><a href="#">Dashboard</a></li>
           </ul>
-          <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <button
+            class="theme-toggle"
+            id="themeToggle"
+            aria-label="Toggle theme"
+          >
             <svg
               class="theme-icon"
               id="themeIcon"
@@ -77,7 +85,11 @@
       </ul>
 
       <div class="mobile-nav__theme-section">
-        <button class="theme-toggle" id="mobileThemeToggle" aria-label="Toggle theme">
+        <button
+          class="theme-toggle"
+          id="mobileThemeToggle"
+          aria-label="Toggle theme"
+        >
           <svg
             class="theme-icon"
             id="mobileThemeIcon"
@@ -108,19 +120,25 @@
             <form id="employeeForm" novalidate>
               <div class="form__grid">
                 <div class="form__group">
-                  <label for="employeeId">Employee ID <span class="form__required">*</span></label>
-                  <input type="text" id="employeeId" name="employeeId" required />
-                  <div class="form__error-message" id="employeeIdError"></div>
+                  <label for="firstName"
+                    >First Name <span class="form__required">*</span></label
+                  >
+                  <input type="text" id="firstName" name="firstName" required />
+                  <div class="form__error-message" id="firstNameError"></div>
                 </div>
 
                 <div class="form__group">
-                  <label for="name">Name <span class="form__required">*</span></label>
-                  <input type="text" id="name" name="name" required />
-                  <div class="form__error-message" id="nameError"></div>
+                  <label for="lastName"
+                    >Last Name <span class="form__required">*</span></label
+                  >
+                  <input type="text" id="lastName" name="lastName" required />
+                  <div class="form__error-message" id="lastNameError"></div>
                 </div>
 
                 <div class="form__group">
-                  <label for="dob">Date of Birth <span class="form__required">*</span></label>
+                  <label for="dob"
+                    >Date of Birth <span class="form__required">*</span></label
+                  >
                   <input type="date" id="dob" name="dob" required />
                   <div class="form__error-message" id="dobError"></div>
                 </div>
@@ -133,11 +151,21 @@
                       <span>Male</span>
                     </label>
                     <label class="form__radio-option">
-                      <input type="radio" name="gender" value="Female" required />
+                      <input
+                        type="radio"
+                        name="gender"
+                        value="Female"
+                        required
+                      />
                       <span>Female</span>
                     </label>
                     <label class="form__radio-option">
-                      <input type="radio" name="gender" value="Other" required />
+                      <input
+                        type="radio"
+                        name="gender"
+                        value="Other"
+                        required
+                      />
                       <span>Other</span>
                     </label>
                   </div>
@@ -145,25 +173,26 @@
                 </div>
 
                 <div class="form__group form__group--full-width">
-                  <label for="address">Address <span class="form__required">*</span></label>
+                  <label for="address"
+                    >Address <span class="form__required">*</span></label
+                  >
                   <textarea id="address" name="address" required></textarea>
                   <div class="form__error-message" id="addressError"></div>
                 </div>
 
                 <div class="form__group">
-                  <label for="phone">Phone Number <span class="form__required">*</span></label>
-                  <input type="tel" id="phone" name="phone" required />
-                  <div class="form__error-message" id="phoneError"></div>
-                </div>
-
-                <div class="form__group">
-                  <label for="doj">Date of Joining <span class="form__required">*</span></label>
+                  <label for="doj"
+                    >Date of Joining
+                    <span class="form__required">*</span></label
+                  >
                   <input type="date" id="doj" name="doj" required />
                   <div class="form__error-message" id="dojError"></div>
                 </div>
 
                 <div class="form__group">
-                  <label for="department">Department <span class="form__required">*</span></label>
+                  <label for="department"
+                    >Department <span class="form__required">*</span></label
+                  >
                   <select id="department" name="department" required>
                     <option value="">Select Department</option>
                     <option value="Engineering">Engineering</option>
@@ -177,33 +206,72 @@
                 </div>
 
                 <div class="form__group">
-                  <label for="manager">Manager Name <span class="form__required">*</span></label>
+                  <label for="manager"
+                    >Designation <span class="form__required">*</span></label
+                  >
+                  <input
+                    type="text"
+                    id="designation"
+                    name="designation"
+                    required
+                  />
+                  <div class="form__error-message" id="designationError"></div>
+                </div>
+
+                <div class="form__group">
+                  <label for="manager"
+                    >Manager Name <span class="form__required">*</span></label
+                  >
                   <input type="text" id="manager" name="manager" required />
                   <div class="form__error-message" id="managerError"></div>
                 </div>
 
                 <div class="form__group">
-                  <label for="email">Email <span class="form__required">*</span></label>
+                  <label for="phone"
+                    >Phone Number <span class="form__required">*</span></label
+                  >
+                  <input type="tel" id="phone" name="phone" required />
+                  <div class="form__error-message" id="phoneError"></div>
+                </div>
+
+                <div class="form__group">
+                  <label for="email"
+                    >Email <span class="form__required">*</span></label
+                  >
                   <input type="email" id="email" name="email" required />
                   <div class="form__error-message" id="emailError"></div>
                 </div>
 
                 <div class="form__group">
-                  <label for="username">Username <span class="form__required">*</span></label>
+                  <label for="username"
+                    >Username <span class="form__required">*</span></label
+                  >
                   <input type="text" id="username" name="username" required />
                   <div class="form__error-message" id="usernameError"></div>
                 </div>
 
                 <div class="form__group">
-                  <label for="password">Password <span class="form__required">*</span></label>
-                  <input type="password" id="password" name="password" required />
+                  <label for="password"
+                    >Password <span class="form__required">*</span></label
+                  >
+                  <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    required
+                  />
                   <div class="form__error-message" id="passwordError"></div>
                 </div>
 
                 <div class="form__group form__group--full-width">
                   <label>Profile Image</label>
                   <div class="form__file-upload-container">
-                    <input type="file" id="profileImage" name="profileImage" accept="image/*" />
+                    <input
+                      type="file"
+                      id="profileImage"
+                      name="profileImage"
+                      accept="image/*"
+                    />
                     <label for="profileImage" class="form__file-label">
                       <svg
                         width="20"
@@ -222,11 +290,17 @@
                       </svg>
                       Choose Image
                     </label>
-                    <img id="imagePreview" class="form__image-preview" alt="Preview" />
+                    <img
+                      id="imagePreview"
+                      class="form__image-preview"
+                      alt="Preview"
+                    />
                   </div>
                 </div>
 
-                <button type="submit" class="form__submit-btn">Register Employee</button>
+                <button type="submit" class="form__submit-btn">
+                  Register Employee
+                </button>
               </div>
             </form>
           </div>
@@ -239,11 +313,14 @@
             <div class="employee-card__image" id="cardImage">
               <span>👤</span>
             </div>
-            <div class="employee-card__name" id="cardName">Employee Name</div>
+            <div class="employee-card__name" id="cardName">
+              <span id="cardFirstName">Employee Name</span>
+              <span id="cardLastName"></span>
+            </div>
             <div class="employee-card__dept" id="cardDept">Department</div>
-            <div class="employee-card__id">ID: <span id="cardId">Not Set</span></div>
           </div>
 
+          <!-- Form instructions card -->
           <div class="instructions-card">
             <div class="instructions-card__title">
               <svg
@@ -253,7 +330,13 @@
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" />
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="10"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
                 <path
                   d="M12 16V12M12 8H12.01"
                   stroke="currentColor"
@@ -265,15 +348,10 @@
             </div>
 
             <div class="instructions-card__item">
-              <div class="instructions-card__label">Employee ID</div>
-              <div class="instructions-card__text">
-                Alphanumeric, 4-10 characters (e.g., EMP001, E12345)
-              </div>
-            </div>
-
-            <div class="instructions-card__item">
               <div class="instructions-card__label">Name</div>
-              <div class="instructions-card__text">Letters and spaces only, 2-50 characters</div>
+              <div class="instructions-card__text">
+                Letters and spaces only, 2-50 characters
+              </div>
             </div>
 
             <div class="instructions-card__item">
@@ -285,7 +363,9 @@
 
             <div class="instructions-card__item">
               <div class="instructions-card__label">Email</div>
-              <div class="instructions-card__text">Valid email format (e.g., user@company.com)</div>
+              <div class="instructions-card__text">
+                Valid email format (e.g., user@company.com)
+              </div>
             </div>
 
             <div class="instructions-card__item">
@@ -298,14 +378,16 @@
             <div class="instructions-card__item">
               <div class="instructions-card__label">Password</div>
               <div class="instructions-card__text">
-                Min 8 characters, must include: uppercase, lowercase, number, and special character
-                (!@#$%^&*)
+                Min 8 characters, must include: uppercase, lowercase, number,
+                and special character (!@#$%^&*)
               </div>
             </div>
 
             <div class="instructions-card__item">
               <div class="instructions-card__label">Address</div>
-              <div class="instructions-card__text">Minimum 10 characters required</div>
+              <div class="instructions-card__text">
+                Minimum 10 characters required
+              </div>
             </div>
           </div>
         </section>

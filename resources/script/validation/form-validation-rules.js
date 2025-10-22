@@ -1,12 +1,12 @@
 // Validation Rules
 const validationRules = {
-  employeeId: {
-    pattern: /^[A-Za-z0-9]{4,10}$/,
-    message: 'Employee ID must be 4-10 alphanumeric characters',
-  },
-  name: {
+  firstName: {
     pattern: /^[A-Za-z\s]{2,50}$/,
-    message: 'Name must contain only letters and spaces (2-50 characters)',
+    message: 'First Name must contain only letters and spaces (2-50 characters)',
+  },
+  lastName: {
+    pattern: /^[A-Za-z\s]{2,50}$/,
+    message: 'Last Name must contain only letters and spaces (2-50 characters)',
   },
   phone: {
     pattern: /^\D*(\d\D*){10}$/,
@@ -31,8 +31,13 @@ const validationRules = {
   },
   manager: {
     pattern: /^[A-Za-z\s]{2,50}$/,
-    message: 'Manager name must contain only letters and spaces',
+    message: 'Manager name must contain only letters and spaces (2-50 characters)',
   },
+  designation: {
+    pattern: /^[A-Za-z\s]{2,50}$/,
+    message: 'Designation must contain only letters and spaces (2-50 characters)',
+  },
+
 };
 
 export default validationRules;

@@ -255,12 +255,6 @@ input[type=file] {
   color: var(--text-secondary);
   font-size: 1rem;
 }
-.employee-card__id {
-  color: var(--primary);
-  font-size: 0.875rem;
-  margin-top: 0.5rem;
-  font-weight: 500;
-}
 
 .instructions-card {
   background: var(--card-bg);
