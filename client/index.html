@@ -107,11 +107,16 @@
 
             <form id="employeeForm" novalidate>
               <div class="form__grid">
+                <div class="form__group">
+                  <label for="firstName">First Name <span class="form__required">*</span></label>
+                  <input type="text" id="firstName" name="firstName" required />
+                  <div class="form__error-message" id="firstNameError"></div>
+                </div>
 
                 <div class="form__group">
-                  <label for="name">Name <span class="form__required">*</span></label>
-                  <input type="text" id="name" name="name" required />
-                  <div class="form__error-message" id="nameError"></div>
+                  <label for="lastName">Last Name <span class="form__required">*</span></label>
+                  <input type="text" id="lastName" name="lastName" required />
+                  <div class="form__error-message" id="lastNameError"></div>
                 </div>
 
                 <div class="form__group">
@@ -234,7 +239,9 @@
             <div class="employee-card__image" id="cardImage">
               <span>👤</span>
             </div>
-            <div class="employee-card__name" id="cardName">Employee Name</div>
+            <div class="employee-card__name" id="cardName">
+              <span id="cardFirstName">Employee</span> <span id="cardLastName">Name</span>
+            </div>
             <div class="employee-card__dept" id="cardDept">Department</div>
           </div>
 

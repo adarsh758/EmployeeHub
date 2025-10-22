@@ -1,6 +1,7 @@
 import sanitizeInput from '../validation/sanitization.js';
 
-const cardNameElement = document.getElementById('cardName');
+const cardFirstNameElement = document.getElementById('cardFirstName');
+const cardLastNameElement = document.getElementById('cardLastName');
 const cardDeptElement = document.getElementById('cardDept');
 
 /**
@@ -20,8 +21,16 @@ function updateDisplayText(displayElement, fallbackText, inputValue) {
  * Handles the input event for the name field and updates the card display.
  * Uses `this.value` because it is bound to the input element in the event listener.
  */
-function updateName() {
-  updateDisplayText(cardNameElement, 'Employee Name', this.value);
+function updateFirstName() {
+  updateDisplayText(cardFirstNameElement, 'Employee First Name', this.value);
+}
+
+/**
+ * Handles the input event for the name field and updates the card display.
+ * Uses `this.value` because it is bound to the input element in the event listener.
+ */
+function updateLastName() {
+  updateDisplayText(cardLastNameElement, 'Employee Last Name', this.value);
 }
 
 /**
@@ -32,4 +41,4 @@ function updateDepartment() {
   updateDisplayText(cardDeptElement, 'Department', this.value);
 }
 
-export { updateName, updateDepartment };
+export { updateFirstName, updateLastName, updateDepartment };

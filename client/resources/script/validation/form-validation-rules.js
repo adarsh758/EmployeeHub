@@ -1,8 +1,12 @@
 // Validation Rules
 const validationRules = {
-  name: {
+  firstName: {
     pattern: /^[A-Za-z\s]{2,50}$/,
-    message: 'Name must contain only letters and spaces (2-50 characters)',
+    message: 'First Name must contain only letters and spaces (2-50 characters)',
+  },
+  lastName: {
+    pattern: /^[A-Za-z\s]{2,50}$/,
+    message: 'Last Name must contain only letters and spaces (2-50 characters)',
   },
   phone: {
     pattern: /^\D*(\d\D*){10}$/,
