@@ -107,11 +107,6 @@
 
             <form id="employeeForm" novalidate>
               <div class="form__grid">
-                <div class="form__group">
-                  <label for="employeeId">Employee ID <span class="form__required">*</span></label>
-                  <input type="text" id="employeeId" name="employeeId" required />
-                  <div class="form__error-message" id="employeeIdError"></div>
-                </div>
 
                 <div class="form__group">
                   <label for="name">Name <span class="form__required">*</span></label>
@@ -241,9 +236,9 @@
             </div>
             <div class="employee-card__name" id="cardName">Employee Name</div>
             <div class="employee-card__dept" id="cardDept">Department</div>
-            <div class="employee-card__id">ID: <span id="cardId">Not Set</span></div>
           </div>
 
+          <!-- Form instructions card -->
           <div class="instructions-card">
             <div class="instructions-card__title">
               <svg
@@ -262,13 +257,6 @@
                 />
               </svg>
               Form Guidelines
-            </div>
-
-            <div class="instructions-card__item">
-              <div class="instructions-card__label">Employee ID</div>
-              <div class="instructions-card__text">
-                Alphanumeric, 4-10 characters (e.g., EMP001, E12345)
-              </div>
             </div>
 
             <div class="instructions-card__item">

@@ -1,9 +1,5 @@
 // Validation Rules
 const validationRules = {
-  employeeId: {
-    pattern: /^[A-Za-z0-9]{4,10}$/,
-    message: 'Employee ID must be 4-10 alphanumeric characters',
-  },
   name: {
     pattern: /^[A-Za-z\s]{2,50}$/,
     message: 'Name must contain only letters and spaces (2-50 characters)',

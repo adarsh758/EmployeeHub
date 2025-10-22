@@ -2,7 +2,7 @@
 import { closeMenu, toggleMenu } from './components/header.js';
 import { initializeTheme, toggleTheme } from './components/theme.js';
 import handleImageUpload from './validation/file-validation.js';
-import { updateId, updateName, updateDepartment } from './components/employee-card.js';
+import { updateName, updateDepartment } from './components/employee-card.js';
 import { handleBlur, handleInput } from './validation/input-validation.js';
 import {handleDateValidation} from './validation/date-validation.js';
 import handleRadioChange from './validation/radio-validate.js';
@@ -50,13 +50,10 @@ form.addEventListener("submit", handleFormSubmit);
 
 /* =============== Employee Card =============== */
 const fileInput = document.getElementById('profileImage');
-const employeeIdInput = document.getElementById('employeeId');
 const nameInput = document.getElementById('name');
 const departmentInput = document.getElementById('department');
 
 fileInput.addEventListener('change', handleImageUpload);
-
-employeeIdInput.addEventListener('input', updateId);
 
 nameInput.addEventListener('input', updateName);
 
